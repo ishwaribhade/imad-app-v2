@@ -40,7 +40,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-var Pool=new Pool(config);
+var pool=new Pool(config);
 app.get('/testdb',function(req,res){
    Pool.query('SELECT * from test',function(err,result){
       if(err)
