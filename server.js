@@ -30,6 +30,13 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/article-one',function(req,res) {
     res.send('Article one requested here');
 });
+
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter+1;
+    res.send(counter.toString());
+});
+
 var Pool=new Pool(config);
 app.get('/testdb',function(req,res){
    pool.query('SELECT * from test',function(err,result){
