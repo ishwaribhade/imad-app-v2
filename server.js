@@ -60,8 +60,8 @@ function hash(input,salt) {
 }
 
 app.get('/hash/:input',function(req,res){
-    var hashedstring=hash(req.params.input,'this-is-a-random-salt');
-    res.send(hashedstring);
+    var hashedString=hash(req.params.input,'this-is-a-random-salt');
+    res.send(hashedString);
 });
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
